@@ -2,14 +2,12 @@ name: artifact
 on: [push]
 env:
   ARTIFACT_NAME: myartifact
-  
-  
 jobs: 
   main:
     runs-on: ubuntu-latest
     steps:
       -name:Check out the code
-       uses: actions/checkout@v2
+       uses: actions/checkout@v1
       -name: upload the artifact
        uses: actions/upload-artifact@v2
        with:
